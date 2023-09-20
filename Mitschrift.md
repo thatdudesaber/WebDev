@@ -1,5 +1,8 @@
 ## Mitschrift
 
+
+#### **Termin 19.09.2023**
+
 ### Basiswissen
 Variablen werden in PHP mit dem "$"-Zeichen gekennzeichnet.
 PHP hat Syntax-Technisch einige Ähnlichkeiten mit Java. Beispiele dazu:
