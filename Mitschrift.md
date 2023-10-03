@@ -145,3 +145,86 @@ function add($a, $b){
 - Formulare
 
 
+
+#### **Termin 03.10.2023**
+
+## Lernaufgabe 1.1 - Mitschrift zu Expertenvideo
+
+### Teil 1 Problemstellung
+Ziel der Aufgabe:
+Eine Webapplikation zum Erfassen und Prüfen von Schulnoten entwickeln.
+
+Mindestanforderungen der Prototyps:
+ - HTML-Formular mit Eingabefeldern und Beschriftung
+ - Löschfunktion zum leeren aller Felder
+ - Validierungsknopf
+ - Nachricht an den User, ob die Daten passen, oder nicht.
+ - Bei Validierungsfehlern soll die entsprechende Fehlermeldung ausgegeben werden.
+ - Responsiveness über das Framework Bootstrap bereitstellen
+
+ WICHTIG! Jede Webapplikation muss eine eine Art der Datenvalidierung besitzen. In diesem Beispiel wird eine Client- und Serverseitige Validierung zum Einsatz gebracht.
+ Clientseitig werden die Daten **vor** dem Absenden überprüft. Validieren z.B. über Input-HTML-Typen und den passenden Zusatzangaben wie *min*, *max*, oder *length*.
+ Serverseitig werden die Daten **nach** dem Senden auf den Server mittels PHP überprüft und validiert. Da eine Clientseitige Validierung leicht geändert oder deaktiviert werden kann, ist die Serverseitige Validierung ein ***muss***!
+
+### Teil 2 Lösungsansatz
+
+1. Formular erstellen
+- HTML-Formular in index.html
+- Datenübertragung soll per HTTP-Post im selben Script erfolgen
+2. Eingabefelder definieren
+- Jedes Eingabefeld benötigt ein eigenes HTML-Input-Element
+- Datenverwaltung - jedes Element benötigt einen eindeutigen Parameter
+3. Clientseitige Validierung
+- Lösung durch HTML und JS
+- Vorteil: Benutzer sieht nach der Eingabe sofort, ob und was falsch eingegeben wurde. Außerdem werden im Falle eine falschen Eingabe keine Daten an den Server geschickt, somit kann Traffic vermieden werden.
+- Nachteil: Kann von einem User bearbeitet bzw. deaktiviert werden, daher ist eine Serverseitige Validierung ein ***muss***!
+4. Serverseitige Validierung
+- **Muss immer ausgeführt werden!**
+5. Datenverarbeitung
+6. Ausgabe der Ergebnisse
+
+
+### Teil 3 Implementierung
+
+#### Start des Projektes
+
+1. Projekt anlegen und Bootstrap herunterladen
+2. Ordner anlegen (je nach Dateityp strukturieren)
+3. index.html anlegen und Bootstrap CSS integrieren
+
+#### Mockup umsetzen
+
+Tipps im Vorherein:
+- div Container für die einzelnen HTML Elemente benutzen, da sich dies für die Mobile-First-Methode Webseiten zu gestalten sehr gut anwendbar macht.
+- Bootstrap Documentation durchlesen, da man mit den prädistenierten Klassen die Webseite formatiert.
+
+Coding:
+1. Formular erstellen
+- Wichtige Parameter:
+    - ```<form>``` - Tag erstellt ein Formular-Element
+    - ```action``` - Inline-Tag beschreibt das Ziel der Eingabe des Formulars
+    - ```method``` - Inline-Tag dass die Datenverarbeitungsart beschreibt
+- Alle Felder wie beim Mockup implementieren
+    - Jedes Feld hat einen eigenen Container
+    - Jeder Input kann einfach kopiert werden, jediglich die felder type und name müssen geändert werden
+- Da wir im Mockup zwei Spalten haben, einmal mit zwei Input-Feldern und einmal mit drei, können wir diese mit zwei weiteren div-Containern trennen.
+2. Buttons erstellen
+- Button muss mit dem ```<input>``` - Tag bestimmte Parameter mitgegeben bekommen, damit HTML weiß, was beim drücken des Buttons ausgeführt werden soll.
+    - z.B. ```type="submit"```
+3. Clientseitige Validierung
+- Neue Tags wie z.B.
+    - maxlength
+    - required (notnull)
+    - min & max
+    - etc.
+- JS-File (wird im Header oder am Ende des Body der HTML verlinkt)
+- In der JS File mit der Hilfe einer Funktion die Validierung des Datums ausführen.
+4. Serverseitige Validierung
+- Validierung per PHP-Script
+- PHP-Bereich in der HTML-Datei im Body inkludieren
+- PHP-Funktionen jedoch auslagern und im PHP-Bereich verlinken
+
+#### TODO
+- Video 3 ab 40min
+- Video 4
+- Code von Git klonen
