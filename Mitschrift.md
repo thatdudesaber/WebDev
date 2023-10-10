@@ -221,10 +221,16 @@ Coding:
 - In der JS File mit der Hilfe einer Funktion die Validierung des Datums ausführen.
 4. Serverseitige Validierung
 - Validierung per PHP-Script
+    - Funktion schreiben, in der alle Daten der Eingabefelder als Parameter übergeben werden und anschließend über eine IF-Verzweigung validiert werden.
 - PHP-Bereich in der HTML-Datei im Body inkludieren
 - PHP-Funktionen jedoch auslagern und im PHP-Bereich verlinken
+- Damit globale Variablen in Funktionen in PHP sichtbar sind muss man innerhalb der Funktion das Schlüsselwort ```global $variable;``` angeben.
 
-#### TODO
-- Video 3 ab 40min
-- Video 4
-- Code von Git klonen
+### Teil 4 Test und Erweiterung
+
+- Damit man die Funktionen der serverseitigen Validierung testen kann, muss man im Browser über die Developer-Konsole den Webseitencode manuell modifizieren.
+    - Typenfelder ändern um clientseitige Validierung zu deaktivieren.
+    - Prüfungen und Code-Referenzierungen entfernen und überprüfen, ob die Webseite das Formular annimmt, oder ablehnt
+- Im Ansichtsmodus der Developer-Konsole auf "variabel" wechseln, um die "Responsiveness" der Webseite zu gewähren.
+
+Mehr wurde im Video nicht mehr besprochen.
