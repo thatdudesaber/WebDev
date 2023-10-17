@@ -234,3 +234,35 @@ Coding:
 - Im Ansichtsmodus der Developer-Konsole auf "variabel" wechseln, um die "Responsiveness" der Webseite zu gewähren.
 
 Mehr wurde im Video nicht mehr besprochen.
+
+#### **Termin 17.10.2023**
+
+### HTTP
+Das Hypertext Transfer Protocol ist für die Kommunikation in Webanwendungen (Request and Response) zwischen dem Client und dem Server zuständig. Dabei wird jede seperate Datei (Bilddateien, JS-Files, etc.) als einzelne Anfragen vom Browser an den Server übermittelt und dort verarbeitet werden.
+
+#### Request and Response
+Ein **Request** startet, in dem der Client eine Anfrage an den Server stellt (z.B. das Senden eines Formulares, Link klicken, am Server gespeicherte Musikdatei abspielen, etc.)
+Eine **Response** ist die Antwort des Servers auf die Anfrage. Je nachdem, was der Client verlangt, kann die Anfrage Daten aus einer oder mehreren Datensätzen zurückschicken. Das hängt von der serverseitigen Logik und dem Use-Case ab.
+
+**Der standartisierte Aufbau einer HTTP-Anfrage od. -Antwort:**
+
+- Meta Informationen
+    - Start Line - Beschreibt den Auftrag genau
+    - Header (Optional) - Noch genauere Beschreibung
+    - Zum Trennen der Infos folgt eine leere Zeile
+- Body (aka. Payload) - Daten, die zu übertragen sind.
+
+#### Methoden
+
+- GET: Hiermit werden Daten vom Server abgerufen
+- POST: Hiermit werden vom Client eigegebene Daten auf den Server übertragen
+- PUT: Hiermit kann man Daten auf dem Server aktualisieren, falls nicht unterstützt -> POST
+- DELETE: Hiermit werden Daten auf dem Server gelöscht
+- PATCH: Hiermit können kleine Änderungen an Ressourcen vorgenommen werden
+- HEAD: Selten verwendet, wie GET-Methode, liefert aber nur die Header-Daten zurück
+- OPTIONS: Hiermit lässt sich testen, mit welchen HTTP-Methode eine URL aufgerufen werden kann.
+- TRACE: Hiermit kann ermittelt werden, welchen Weg die Anfrage nimmt. Sehr praktisch für Security-Tests.
+- CONNECT: Hiermit stellt man einen HTTP-Tunnel zwischen Browser und Server her.
+
+#### Cookies
+Cookies ermöglichen es kleinere Mengen von Informationen auf der Clientseite zu speichern und im Falle eines weiteren Besuchs serverseitig auszulesen. 
