@@ -13,11 +13,34 @@
 
 <?php
 
+//einbinden der Validierungsfunktionen
+require "lib/func.inc.php";
+
 //Formularvariablen definieren
 $name = "";
 $date = "";
 $size = "";
 $weight = "";
+
+if (isset($_POST['submit'])) {
+
+    // double-check: zuerst pruefen ob die Daten im Request enthalten sein, dann auslesen
+    $name = isset($_POST['name']) ? $_POST['name'] : "";
+    $date = isset($_POST['date']) ? $_POST['date'] : "";
+    $size = isset($_POST['size']) ? $_POST['size'] : "";
+    $weight = isset($_POST['weight']) ? $_POST['weight'] : "";
+
+    // Validierung der Daten und Ausgabe des Ergebnisses (an der aktuellen Stelle in der HTML-Seite)
+    if (validate($name, $date, $size, $weight)) {
+        echo "<p class='alert alert-success'>Die eingegebenen Daten sind in Ordnung!</p>";
+    } else {
+        echo "<div class='alert alert-danger'><p>Die eingegebenen Daten sind fehlerhaft!</p><ul>";
+        foreach ($errors as $key => $value) {
+            echo "<li>" . $value . "</li>";
+        }
+        echo "</ul></div>";
+    }
+}
 
 
 ?>
@@ -72,6 +95,22 @@ $weight = "";
                             required="required">
             </div>
         </div>
+
+        <!-- Buttons -->
+        <div class="row mt-3">
+            <div class="col-sm-3 mb-3">
+                <input type="submit"
+                       name="submit"
+                       class="btn btn-primary btn-block"
+                       value="Speichern"
+                >
+            </div>
+
+            <div class="col-sm-3">
+                <a href="index.php" class="btn btn-secondary btn-block">Löschen</a>
+            </div>
+
+        </div>
     </form>
 
 
@@ -80,7 +119,6 @@ $weight = "";
 
 <!-- Textausgabe (mal schauen, ob und wo ich das benötige) -->
 
-<!-- Buttons -->
 
 </div>
 
