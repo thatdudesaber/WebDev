@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>BMI-Rechner</title>
+
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
@@ -49,7 +51,7 @@ if (isset($_POST['submit'])) {
 
 <div class="container">
 
-    <h2>BMI Rechner</h2>
+    <h2 class="pt-5">BMI Rechner</h2>
 
 
     <!-- Formular -->
@@ -102,14 +104,12 @@ if (isset($_POST['submit'])) {
                 <input type="submit"
                        name="submit"
                        class="btn btn-primary btn-block"
-                       value="Speichern"
-                >
+                       value="Speichern">
             </div>
 
             <div class="col-sm-3">
                 <a href="index.php" class="btn btn-secondary btn-block">Löschen</a>
             </div>
-
         </div>
     </form>
 
