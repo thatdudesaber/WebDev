@@ -1,5 +1,31 @@
 <?php
 
+function getFilteredData($filter){
+    $data = getAllData();
+    foreach($data as $row){
+        if(str_contains($row["firstname"], $filter)
+            || str_contains($row["lastname"], $filter)
+            || str_contains($row["email"], $filter)
+            || str_contains($row["birthdate"], $filter))
+        {
+            return $row;
+        }
+    }
+}
+
+function getDataByID($id){
+    $data = getAllData();
+    foreach($data as $row){
+        if($row["id"] == $id){
+            return $row;
+        }
+    }
+}
+
+
+
+
+
 function getAllData(){
 return [[
     "id" => 1,
