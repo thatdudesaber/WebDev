@@ -1,4 +1,7 @@
-$data = [[
+<?php
+
+function getAllData(){
+return [[
     "id" => 1,
     "firstname" => "Hamnet",
     "lastname" => "Fice",
@@ -799,3 +802,4 @@ $data = [[
     "birthdate" => "1991-07-06",
     "street" => "Rusk"
 ]];
+}
