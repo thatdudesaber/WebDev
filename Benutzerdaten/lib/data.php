@@ -1,18 +1,40 @@
 <?php
 
+/** 
+ * Zum Filtern der einzelnen Datensätze aus dem gegebenen Datenpool mithilfe der $filter-Variable.
+ * In der foreach-Schleife werden die zu filternden Daten mithilfe der case-insensitiven Funktion "stripos()" überprüft.
+ * Falls der Suchfilter bei einem Durchlauf zutrifft, wird das derzeitige Array ($row) in das Array "$filteredData" gespeichert.
+ * Nach dem Durchlauf wird das Array $filteredData zurückgegeben.
+ * 
+ * @param $filter
+ * @author Stefan Pohl
+ **/
 function getFilteredData($filter){
+    $filteredData = null;
     $data = getAllData();
-    foreach($data as $row){
-        if(str_contains($row["firstname"], $filter)
-            || str_contains($row["lastname"], $filter)
-            || str_contains($row["email"], $filter)
-            || str_contains($row["birthdate"], $filter))
+    foreach($data as $row)
+    {
+        if(stripos($row['firstname'], $filter) !== FALSE 
+        || stripos($row['lastname'],$filter) !== FALSE 
+        || stripos($row['email'],$filter) !== FALSE 
+        || stripos($row['birthdate'],$filter))
         {
-            return $row;
+            $filteredData[] = $row;
         }
+    }
+    if($filteredData == null){
+        return null;
+    } else {
+        return $filteredData;
     }
 }
 
+/** 
+ * Zum Filtern der einzelnen Datensätze aus dem gegebenen Datenpool mithilfe der $id-Variable.
+ * 
+ * @param $id
+ * @author Stefan Pohl
+ **/
 function getDataByID($id){
     $data = getAllData();
     foreach($data as $row){
@@ -22,10 +44,24 @@ function getDataByID($id){
     }
 }
 
+/** 
+ * Verändert das Layout des Strings in der Variable $date mithilfe der "date_format()"-Funktion.
+ * 
+ * @param $date
+ * @author Stefan Pohl
+ **/
+function dateFormat($date){
+    return date_format(date_create($date),"d.m.Y");
+}
 
 
 
 
+/** 
+ * Gibt den gesamten Datensatz aus.
+ * 
+ * @author Stefan Pohl
+ **/
 function getAllData(){
 return [[
     "id" => 1,
