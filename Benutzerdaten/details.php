@@ -7,7 +7,6 @@ $data = getDataByID($id);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +17,9 @@ $data = getDataByID($id);
 </head>
 <body onload="initialize()">
 
-
-
 <div class="container">
-
     <h1 class="pt-5">Benutzerdetails</h1>
     <a href="index.php?filter=<?=$filter?>">zurück</a>
-
     <?php
     if ($data == null){
         echo "<p class='alert alert-danger'>Benutzer nicht gefunden</p>";
@@ -61,10 +56,7 @@ $data = getDataByID($id);
         <?php
     }
      ?>
+</div>   
 
-
-</div>
-
-    
 </body>
 </html>
