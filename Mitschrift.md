@@ -266,3 +266,30 @@ Eine **Response** ist die Antwort des Servers auf die Anfrage. Je nachdem, was d
 
 #### Cookies
 Cookies ermöglichen es kleinere Mengen von Informationen auf der Clientseite zu speichern und im Falle eines weiteren Besuchs serverseitig auszulesen. 
+
+#### **Termin 28.11.2023**
+
+### Sessions und Cookies
+
+### Wissenswertes
+- Obwohl HTTP ein zustandsloses Protokoll ist, können und müssen in Webapplikationen Daten über mehrere HTTP-Requests hinaus sowohl am Client als auch am Server gespeichert werden.
+- Geschäftslogik und Darstellung müssen eine klare Trennung aufweisen.
+- Objektorientierung ist ein zentrales Element für die Umsetzung der Geschäftslogik, welche die Wiederverwendung und Erweiterung des Systems begünstigt bzw. überhaupt erst ermöglicht.
+- *mobile first* lautet aktuell die Devise bei der Entwicklung von Webanwendungen.
+- JSON ist ein gängiges Format um Objekte in textueller Form zu speichern und zu übermitteln.
+
+### Grundlagen
+
+#### Cookies
+Cookies sind kleine Textdateien, die von einer Webseite auf dem Computer eines Benutzers gespeichert werden. Sie dienen dazu, Informationen über die Benutzeraktivität zu speichern. Cookies können für verschiedene Anwendungsfälle eingesetzt werden. Ein bekannter Fall wäre in Form von **Tracking**, bei dem das Benutzerverhalten gespeichert wird und diese Informationen für Werbezwecke verwendet werden. Diese Form von Cookies findet man heutzutage auf fast allen öffentlich zugänglichen Webseiten im Internet.
+
+#### Sessions
+Sessions sind eine serverseitige Speicherung von Daten, die für die Interaktion mit einem bestimmten Besucher verwendet wird. Im Gegensatz zu Cookies, die auf dem Computer des Benutzers gespeichert sind, werden Session-Daten auf dem Server gespeichert.
+
+Wenn ein Benutzer eine Webseite besucht, wird eine eindeutige Sitzungs-ID erstellt und auf seinem Computer in Form eines Cookies gespeichert (in der Regel als **sessionID**). Diese Sitzungs-ID wird verwendet, um auf dem Server Informationen zu speichern, die spezifisch für diesen Benutzer während seines Besuchs auf der Webseite sind. Das kann beispielsweise der Inhalt eines Einkaufswagens in einem Online-Shop sein oder der angemeldete Benutzer in einer Anwendung.
+
+Die Sitzungsinformationen bleiben so lange erhalten, wie die Sitzung aktiv ist (der Benutzer die Seite besucht und interagiert). Sobald der Benutzer den Browser schließt oder sich abmeldet, werden die Sitzungsinformationen auf dem Server gelöscht.
+
+Sessions bieten eine sicherere Möglichkeit, Daten zu speichern, da sie auf dem Server liegen und nicht vom Benutzer manipuliert werden können. Sie sind oft effektiver für sensible Daten wie Benutzeranmeldungen oder finanzielle Transaktionen.
+
+In Webanwendungen arbeiten Cookies und Sessions oft zusammen, um eine personalisierte Benutzererfahrung zu ermöglichen, Benutzerdaten zu speichern und das Verhalten der Benutzer zu verfolgen.
