@@ -1,7 +1,8 @@
 ## Mitschrift
 
-
+***
 #### **Termin 19.09.2023**
+***
 
 ### Basiswissen
 Variablen werden in PHP mit dem "$"-Zeichen gekennzeichnet.
@@ -12,8 +13,9 @@ if-Verzweigungen, Schleifen und Arithmetische sowie Boole'sche Operatoren sind i
 PHP ist eine Programmiersprache, die für Webapplikationen benutzt werden kann.
 Das Handling funktioniert über einen Server, der die Anfrage von PHP interpretieren lässt und das Ergebnis zurückschickt.
 
-
+***
 #### **Termin 26.09.2023**
+***
 
 ### Geschichte von PHP
 PHP wurde im Jahre 1995 von Herrn Rasmus Lerdorf entwickelt und ist auch heute noch eine der wichtigsten Programmiersprachen in der Entwicklung dynamischer Webapplikationen. Man konnte die ersten 20 Jahre in PHP keinen objektorientieren Code schreiben und wurde dadurch erst mit dem Update auf Version 7.0 wieder richtig interessant. Seit 8.1 unterstützt PHP sogar die Nebenläufigkeit: Multithreading.
@@ -145,8 +147,9 @@ function add($a, $b){
 - Formulare
 
 
-
+***
 #### **Termin 03.10.2023**
+***
 
 ## Lernaufgabe 1.1 - Mitschrift zu Expertenvideo
 
@@ -235,7 +238,9 @@ Coding:
 
 Mehr wurde im Video nicht mehr besprochen.
 
+***
 #### **Termin 17.10.2023**
+***
 
 ### HTTP
 Das Hypertext Transfer Protocol ist für die Kommunikation in Webanwendungen (Request and Response) zwischen dem Client und dem Server zuständig. Dabei wird jede seperate Datei (Bilddateien, JS-Files, etc.) als einzelne Anfragen vom Browser an den Server übermittelt und dort verarbeitet werden.
@@ -267,7 +272,9 @@ Eine **Response** ist die Antwort des Servers auf die Anfrage. Je nachdem, was d
 #### Cookies
 Cookies ermöglichen es kleinere Mengen von Informationen auf der Clientseite zu speichern und im Falle eines weiteren Besuchs serverseitig auszulesen. 
 
+***
 #### **Termin 28.11.2023**
+***
 
 ### Sessions und Cookies
 
