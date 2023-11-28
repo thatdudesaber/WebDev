@@ -1,6 +1,6 @@
 ## Mitschrift
 
-***
+
 #### **Termin 19.09.2023**
 ***
 
@@ -13,7 +13,7 @@ if-Verzweigungen, Schleifen und Arithmetische sowie Boole'sche Operatoren sind i
 PHP ist eine Programmiersprache, die für Webapplikationen benutzt werden kann.
 Das Handling funktioniert über einen Server, der die Anfrage von PHP interpretieren lässt und das Ergebnis zurückschickt.
 
-***
+
 #### **Termin 26.09.2023**
 ***
 
@@ -147,11 +147,11 @@ function add($a, $b){
 - Formulare
 
 
-***
+
 #### **Termin 03.10.2023**
 ***
 
-## Lernaufgabe 1.1 - Mitschrift zu Expertenvideo
+### Lernaufgabe 1.1 - Mitschrift zu Expertenvideo
 
 ### Teil 1 Problemstellung
 Ziel der Aufgabe:
@@ -238,7 +238,7 @@ Coding:
 
 Mehr wurde im Video nicht mehr besprochen.
 
-***
+
 #### **Termin 17.10.2023**
 ***
 
@@ -272,7 +272,7 @@ Eine **Response** ist die Antwort des Servers auf die Anfrage. Je nachdem, was d
 #### Cookies
 Cookies ermöglichen es kleinere Mengen von Informationen auf der Clientseite zu speichern und im Falle eines weiteren Besuchs serverseitig auszulesen. 
 
-***
+
 #### **Termin 28.11.2023**
 ***
 
