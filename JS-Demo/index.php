@@ -1,16 +1,24 @@
 <?php
-$datum = $_POST['datum'];
+
+$errors = [];
 
 if(validateDatum($datum)){
-
+    $datum = htmlspecialchars($_POST['datum']);
 } else {
     $errors['datum'] = 'Bitte geben Sie ein gültiges Datum ein!';
 }
 
 
-function validateDatum($datum){
-
-}
+    function validateDatum($datum){
+        $currentDate = new DateTime('now');
+        if($datum != null && $datum != '' && $datum < $currentDate) {
+            echo "Datum passt!";
+            return true;
+        } else {
+            echo "Datum passt nit!";
+            return false;
+        }
+    }
 
 
 ?>
@@ -25,12 +33,16 @@ function validateDatum($datum){
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <form action="index.php" method="post">
-        <label for="datum">Ausleihdatum:</label>
-        <input type="date" name="datum" id="datum" value="" required />
-        <button type="submit">Ausleihen</button>
-    </form>
-    <script src="js/index.js"></script>
     
+    <div class="container">
+        <form action="index.php" method="post">
+            <label for="datum">Ausleihdatum:</label>
+            <input type="date" name="datum" id="datum" value="<?=htmlspecialchars($datum)?>" required />
+            <button type="submit">Ausleihen</button>
+        </form>
+    </div>
+    
+<script src="js/index.js"></script>
+
 </body>
 </html>
