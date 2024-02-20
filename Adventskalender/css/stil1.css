@@ -1,0 +1,113 @@
+/*
+    Autor: Michael Gamper
+    Winter 2023
+*/
+:root {
+    --primary: #193C40;
+    --primary_translucent: #193C4055;
+    --secondary: #2E5902;
+    --secondary_translucent: #2E590277;
+    --text: white;
+  }
+
+body {
+    font-family: cursive;
+    background-color: var(--secondary);
+    color: var(--text);
+    margin: 0px;
+}
+
+header{
+    background-color: var(--secondary);
+    background-image: url('../bilder/headerbackground.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 1em 0px 1em 0px;
+    margin: auto;
+    border-bottom: 2em solid var(--secondary_translucent);
+}
+
+header h1 {
+    /* background-color: #549F93ff; */
+}
+
+main {
+    /* background-image: url('../bilder/bodybackground.jpg'); */
+    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.fenstercontainer {
+    display: flex;
+    align-items: flex-start; 
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.fenster {
+    width: 15%;
+    min-width: 300px;
+    /* background-color: var(--secondary_translucent); */
+    backdrop-filter: blur(10px);
+    border-radius: 2em;
+    /* padding: 1em; */
+    margin: 2em;
+}
+
+.fenster img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.fenster a {
+    text-decoration: none;
+}
+
+.fensterhead {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em var(--primary);
+    color: var(--text);
+    /* display: block; */
+    position: absolute;
+    top: 10%;
+    background-color: var(--primary_translucent);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.fenstertext {
+    font-size: medium;
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em var(--primary);
+    color: var(--text);
+    /* display: block; */
+    position: absolute;
+    bottom: 10%;
+    background-color: var(--primary_translucent);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+.nummer:hover {
+    border: 1px solid red;
+    display: none;
+}
+
+footer {
+    background-color: #193C40;
+    background-image: url('../bilder/headerbackground.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 1em;
+}
