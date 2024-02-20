@@ -81,7 +81,9 @@
         ?>
 
     </main>
-    <footer>&copy; &lt;Dein Name&gt;</footer>
+
+    <footer>&copy; Stefan Pohl 2023</footer>
+
     <script src="js/schnee.js"></script>
 </body>
 </html>
